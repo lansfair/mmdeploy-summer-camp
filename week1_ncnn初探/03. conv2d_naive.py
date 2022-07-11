@@ -31,4 +31,5 @@ if __name__ == '__main__':
     Y1 = corr2d(img, K1)
     Y2 = corr2d(img, K2)
     Y = np.where(Y1 > Y2, Y1, Y2)
-    cv2.imwrite("results.png", Y)
+    cv2.imwrite("conv2d_results.png", Y)
+    print("边缘检测完成")
