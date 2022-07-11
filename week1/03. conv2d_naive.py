@@ -9,7 +9,7 @@ def corr2d(X, K, padding=True):
     if padding:
         image_padded = np.zeros((X.shape[0] + h - 1, X.shape[1] + w - 1))
         image_padded[h//2:-(h//2), w//2:-(w//2)] = X
-        Y = np.zeros(X.shape) # 定义运算后的特征图大小
+        Y = np.zeros(X.shape)  # 定义运算后的特征图大小
     else:
         image_padded = X
         Y = np.zeros((X.shape[0] - h + 1, X.shape[1] - w + 1))  # 定义运算后的特征图大小
